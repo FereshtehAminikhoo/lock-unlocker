@@ -71,8 +71,8 @@ class Order extends Model
 use LockUnlocker\Classes\Lock;
 use LockUnlocker\Classes\Unlock;
 
-Lock::lock(Order::class, $orderId, 'user', auth()->id());
-Unlock::unlock(Order::class, $orderId, 'user', auth()->id());
+Lock::applyLock(Order::class, $orderId, 'user', auth()->id());
+Unlock::releaseLock(Order::class, $orderId, 'user', auth()->id());
 ```
 
 ### ✅ Filter unlocked models

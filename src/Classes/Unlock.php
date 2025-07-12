@@ -8,7 +8,7 @@ use LockUnlocker\Models\LockUnlockerLog;
 
 class Unlock
 {
-    public static function unlock($model_name, $model_id, $creator_name = 'user', $creator_id = null)
+    public static function releaseLock($model_name, $model_id, $creator_name = 'user', $creator_id = null)
     {
         $lock = LockUnlocker::where('model_name', $model_name)
                             ->where('model_id', $model_id)

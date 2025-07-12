@@ -10,7 +10,7 @@ use LockUnlocker\Models\LockUnlockerLog;
 
 class Lock
 {
-    public static function lock($model_name, $model_id, $creator_name = 'user', $creator_id = null)
+    public static function applyLock($model_name, $model_id, $creator_name = 'user', $creator_id = null)
     {
         $time = config('lockUnlocker.default_lock_time');
         $lockExpiredAt = Carbon::now()->add(CarbonInterval::make($time));

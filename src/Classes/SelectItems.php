@@ -4,7 +4,7 @@ namespace LockUnlocker\Classes;
 
 class SelectItems
 {
-    public static function selectItems($model_name, $model_id)
+    public static function filterUnlocked($model_name, $model_id)
     {
         // implement custom logic if needed
     }
