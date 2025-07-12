@@ -1,0 +1,30 @@
+{
+    "name": "fereshtehaminikhoo/lock-unlocker",
+    "description": "Lock/Unlock system for Laravel models",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fereshteh Aminikhoo",
+            "homepage": "https://github.com/FereshtehAminikhoo"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LockUnlocker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LockUnlocker\\LockUnlockerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
